@@ -1,0 +1,12 @@
+---
+items:
+  - text: Azure AKS
+    url: "/blog/aks"
+  - text: Ansible
+    url: "#"
+  - text: Terraform
+    url: "#"
+  - text: Bash Scripting
+    url: "/blog/bash"
+  - text: Blog Archive
+    url: "/blog"

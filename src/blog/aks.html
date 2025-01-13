@@ -1,0 +1,45 @@
+---
+layout: blog
+title: Azure AKS Series
+---
+
+<section class="mt-15">
+    {% set postslist = collections.aks %}
+
+    {% for post in postslist | reverse %}
+        <article class="my-8 grid grid-cols-12 gap-4 lg:gap-2 border p-4 items-center rounded-md shadow-sm">
+            <img class="col-span-12 lg:mx-auto lg:col-span-4 max-h-[80px] lg:max-h-[130px]" src="{{post.data.poster}}" alt="">
+            <div class="col-span-12 lg:col-span-8">
+                <h2 class="font-bold text-3xl text-gray-900 mb-2">
+                    <a href="{{ post.url | url }}">
+                        {% if post.data.title %}
+                        {{ post.data.title }}
+                        {% else %}
+                        Untitled
+                        {% endif %}
+                    </a>
+                </h2>
+                <p class="text-base leading-6 text-gray-500 mb-3">
+                    <time>
+                        {{ post.date | readableDate }}
+                        by
+                        <a>{{ post.data.author }}</a>
+                        
+                    </time>
+                </p>
+                {% if post.data.description %}
+                <p class="text-lg text-gray-500 mb-3">
+                        {{ post.data.description }}
+                    </p>
+                {% endif %}
+    
+                <p>
+                    <a href="{{ post.url | url }}" class="text-indigo-500 font-bold text-lg">
+                        Read more →
+                    </a>
+                </p>
+            </div>
+
+        </article>
+    {% endfor %}
+</section>

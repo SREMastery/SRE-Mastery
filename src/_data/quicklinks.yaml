@@ -1,0 +1,8 @@
+---
+links:
+  - title: Azure AKS
+    url: "/blog/aks"
+    desc: Learn Azure Kubernetes in the most intutitive way
+  - title: Terraform
+    url: "/"
+    desc: Terraform Infrastructure as Code (IaC)
