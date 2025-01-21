@@ -1,9 +1,0 @@
-Azure AKS -> Kubernetes with dropdown (Azure AKS, .., Bare Metal)
-Devops -> Dropdown (Basics, Azure devops, GitHub Actions, Jenkins)
-IaC -> (Terraform, Bicep)
-Azure Admin -> (Basics, Entra ID, Keyvault, ...)
-Scripting -> (Bash, Golang, Python, YAML, PowerShell)
-Config Mgmt -> (Ansible, Chef)
-_________________________________
-
-make navbar in sre-mastery
