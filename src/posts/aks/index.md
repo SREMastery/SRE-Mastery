@@ -1,16 +1,11 @@
 ---
 title: Getting Started with Azure AKS
-description: AKS Devops
-date: 2025-01-07T15:13:13.021Z
+description: From Zero to Hero - Azure Kubernetes Service
+date: 2025-01-30T15:13:13.021Z
 author: Narashim Reddy
 tags: aks
 poster: '/static/img/poster/aks.png'
 layout: posts
 ---
 
-# Hello world
-```bash
-ls -la
-```
-
-ABCD
+# AKS from scratch

@@ -1,0 +1,104 @@
+[
+  {
+    "title": "Kubernetes",
+    "items": [
+      {
+        "title": "Azure AKS",
+        "url": "/posts/aks"
+      },
+      {
+        "title": "Bare Metal",
+        "url": "/posts/k8s-bare-metal"
+      }
+    ]
+  },
+  {
+    "title": "Devops",
+    "items": [
+      {
+        "title": "Basics",
+        "url": "/posts/devops-basics"
+      },
+      {
+        "title": "Azure Devops",
+        "url": "/posts/azure-devops"
+      },
+      {
+        "title": "Github Actions",
+        "url": "/posts/github-actions"
+      },
+      {
+        "title": "Jenkins",
+        "url": "/posts/jenkins"
+      }
+    ]
+  },
+  {
+    "title": "IaC",
+    "items": [
+      {
+        "title": "Terraform",
+        "url": "/posts/terraform"
+      },
+      {
+        "title": "Bicep",
+        "url": "/posts/bicep"
+      }
+    ]
+  },
+  {
+    "title": "Azure Admin",
+    "items": [
+      {
+        "title": "Basics",
+        "url": "/posts/azure-admin-basics"
+      },
+      {
+        "title": "Entra ID",
+        "url": "/posts/entra-id"
+      },
+      {
+        "title": "Key Vault",
+        "url": "/posts/key-vault"
+      }
+    ]
+  },
+  {
+    "title": "Scripting",
+    "items": [
+      {
+        "title": "Bash",
+        "url": "/posts/bash"
+      },
+      {
+        "title": "PowerShell",
+        "url": "/posts/powershell"
+      },
+      {
+        "title": "Golang",
+        "url": "/posts/golang"
+      },
+      {
+        "title": "Python",
+        "url": "/posts/python"
+      },
+      {
+        "title": "YAML",
+        "url": "/posts/yaml"
+      }
+    ]
+  },
+  {
+    "title": "Config Management",
+    "items": [
+      {
+        "title": "Ansible",
+        "url": "/posts/ansible"
+      },
+      {
+        "title": "Chef",
+        "url": "/posts/chef"
+      }
+    ]
+  }
+]
