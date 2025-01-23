@@ -1,4 +1,4 @@
-<nav class="py-3 shadow-sm grid grid-cols-12 lg:px-8 border">
+<nav class="hidden lg:grid py-3 shadow-sm grid-cols-12 lg:px-8 border">
 	<a
 		href="/"
 		class="flex items-center col-span-3 flex-row gap-4 justify-center text-indigo-500 font-bold text-lg"
@@ -8,17 +8,78 @@
 	</a>
 	<div class="flex flex-row w-full col-span-9 items-center ml-8 gap-8">
 		{% for item in navdata %}
-    <div class="relative group py-1 flex flex-col items-center">
-      <p class="cursor-pointer group-hover:bg-gray-100 border rounded-md border-transparent px-4 p-2">{{item.title}}</p>
-      <div class="absolute top-12 hidden border rounded-md shadow-sm group-hover:flex py-4 px-2 bg-white flex-col gap-1 min-w-[120px]">
-          {% if item.items %}
-            {% for submenu in item.items %}
-              <a class="text-nowrap py-2 hover:bg-gray-100 rounded-md px-4" href="{{submenu.url}}">{{submenu.title}}</a>
-            {% endfor %}
-          {% endif %}
-        </div>
-      </div>
-      {% endfor %}
-      <a href="/archive" class="hover:bg-gray-100 px-4 py-2 rounded-md ">Archive</a>
+		<div class="relative group py-1 flex flex-col items-center">
+			<p
+				class="cursor-pointer group-hover:bg-gray-100 border rounded-md border-transparent px-4 p-2"
+			>
+				{{item.title}}
+			</p>
+			<div
+				class="absolute top-12 hidden border rounded-md shadow-sm group-hover:flex py-4 px-2 bg-white flex-col gap-1 min-w-[120px]"
+			>
+				{% if item.items %} {% for submenu in item.items %}
+				<a
+					class="text-nowrap py-2 hover:bg-gray-100 rounded-md px-4"
+					href="{{submenu.url}}"
+					>{{submenu.title}}</a
+				>
+				{% endfor %} {% endif %}
+			</div>
+		</div>
+		{% endfor %}
+		<a href="/archive" class="hover:bg-gray-100 px-4 py-2 rounded-md"
+			>Archive</a
+		>
+	</div>
+</nav>
+<nav
+	x-data="{open: false}"
+	class="grid lg:hidden shadow-md border p-2 bg-white items-center justify-between grid-cols-12"
+>
+	<a
+		href="/"
+		class="flex items-center col-span-8 mr-auto pl-4 select-none flex-row gap-4 justify-center text-indigo-500 font-bold text-lg"
+	>
+		<img class="h-12 rounded-md" src="/static/img/logo.png" alt="" />
+		<p>SRE Mastery</p>
+	</a>
+	<div
+		class="col-span-4 flex flex-row justify-center items-center ml-auto mr-4 w-8"
+		x-on:click="open = !open"
+	>
+		<div x-bind:class="open ? 'block' : 'hidden'">
+			<img src="/static/img/menu-close.svg" alt="" />
+		</div>
+		<div x-bind:class="!open ? 'block' : 'hidden'">
+			<img src="/static/img/menu-open.svg" alt="" />
+		</div>
+	</div>
+	<div
+		x-bind:class="(open ? 'block ' : 'hidden ') + 'col-span-12 border-t-2 mt-1'"
+	>
+		<div class="flex flex-col justify-center gap-2 text-lg px-10 mt-4">
+			{% for item in navdata %}
+			<div x-data="{submenuOpened: false}">
+				<div
+					x-on:click="submenuOpened = !submenuOpened"
+					class="p-2 flex flex-row items-center justify-between gap-4"
+				>
+					<p>{{item.title}}</p>
+					<img
+						src="/static/img/arrow.svg"
+						x-bind:class="(submenuOpened ? '' : '-rotate-90 ') + 'w-5'"
+						alt=""
+					/>
+				</div>
+				<div
+					x-bind:class="(!submenuOpened ? 'hidden ' : 'block ') + 'px-4 flex flex-col gap-2 text-center'"
+				>
+					{% for submenu in item.items %}
+					<a href="{{submenu.url}}">{{submenu.title}}</a>
+					{% endfor %}
+				</div>
+			</div>
+			{% endfor %}
+		</div>
 	</div>
 </nav>
